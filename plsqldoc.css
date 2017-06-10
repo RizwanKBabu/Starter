@@ -3,13 +3,6 @@
 BODY
 { 
   Changes for commit
-  font-family: Verdana,Arial,Helvetica,sans-serif;
-  background-color : #ECECEC;
-  font-size : 12px;
-  font-weight: normal;
-  font-style: normal;
-  margin-left: 15px;
-  margin-top: 25px;
 }
 
 A         {color: #333300; text-decoration: underline;}
