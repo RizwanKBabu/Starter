@@ -3,12 +3,12 @@
 BODY
 { 
 <<<<<<< HEAD
-  Changes for commit a
+  Changes for commit all
 =======
   Changes for commit ok
 >>>>>>> 4d3966a8c772e55fdfb6e9658efc49d81e61ef29
 }
-
+Check working
 A         {color: #333300; text-decoration: underline;}
 A:active  {color: #2020C0; text-decoration: underline;}    
 A:hover   {color: #4040C0; text-decoration: underline;}
