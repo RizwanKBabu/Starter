@@ -2,7 +2,11 @@
 
 BODY
 { 
+<<<<<<< HEAD
   Changes for commit a
+=======
+  Changes for commit ok
+>>>>>>> 4d3966a8c772e55fdfb6e9658efc49d81e61ef29
 }
 
 A         {color: #333300; text-decoration: underline;}
