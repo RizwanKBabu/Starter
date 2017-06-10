@@ -1,28 +1,6 @@
 /* PL/SQL Developer, plsqldoc styles */
 
-BODY
-{ 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Changes for commit all
-=======
-  Changes for commit a working
->>>>>>> 9e2dbae133a36f0e5e15a807976b4d33b84bc24f
-=======
-  Changes for commit ok
->>>>>>> 4d3966a8c772e55fdfb6e9658efc49d81e61ef29
-}
-Check working
-A         {color: #333300; text-decoration: underline;}
-A:active  {color: #2020C0; text-decoration: underline;}    
-A:hover   {color: #4040C0; text-decoration: underline;}
-A:visited {color: #101060; text-decoration: underline;} 
 
-
-/* Style for Title of document (Package ...) */
-    
-.MAIN_TITLE
-{
  font-family: Verdana,Arial,Helvetica,sans-serif;
  font-size : medium;
  color: #992266;
