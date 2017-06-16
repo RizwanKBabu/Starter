@@ -5,15 +5,8 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Calendar;
 
-<<<<<<< Upstream, based on branch 'master' of https://github.com/RizwanKBabu/Starter.git
-<<<<<<< Upstream, based on branch 'master' of https://github.com/RizwanKBabu/Starter.git
 public class Tester {
-=======
-class Test {
->>>>>>> b4d57bc Changing Class name
-=======
-class Tester {
->>>>>>> ae76f14 Solving Conflicts
+
 
 	public static void main(String[] args)
 	{
