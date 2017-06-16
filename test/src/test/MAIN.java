@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Calendar;
 
-public class Tester {
+public class MAIN {
 
 
 	public static void main(String[] args)
@@ -25,7 +25,8 @@ public class Tester {
 		java.util.Date desiredDate = cal.getTime();
 		System.out.println(desiredDate);
 		
-		
+		From_Main m = new From_Main();
+		m.callMe();
 		
 	}
 	
