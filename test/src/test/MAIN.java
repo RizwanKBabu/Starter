@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Calendar;
 
-public class MAIN {
+public class Tester {
 
 	public static void main(String[] args)
 	{
