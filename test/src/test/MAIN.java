@@ -24,7 +24,7 @@ public class MAIN {
 		java.util.Date desiredDate = cal.getTime();
 		System.out.println(desiredDate);
 		
-		System.out.println("Git testing");
+		System.out.println("Git testing on Eclipse");
 		
 	}
 	
