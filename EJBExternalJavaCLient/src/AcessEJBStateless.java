@@ -76,7 +76,7 @@ public class AcessEJBStateless {
 	         
 	         /**Using wsimport
 	          **set path="C:\Program Files\Java\jdk1.8.0_111\bin"
-	          **wsimport -keep -verbose  http://localhost:7004/FirstEJB/webservice_tester?wsdl
+	          **wsimport -keep -verbose  http://localhost:7004/FirstEJB/webservice_tester?wsdl -folderName
 	          **move generated folder to project as package 
 	          ** similar way can use wsgen also to generate webservice
 	          */
