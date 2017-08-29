@@ -9,5 +9,7 @@
 	<classpathentry kind="lib" path="C:/Users/Rizwan K Babu/Downloads/JARS/javax.jms.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Rizwan K Babu/Downloads/JARS/jndi-1.2.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/FirstEJB"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

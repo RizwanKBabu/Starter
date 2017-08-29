@@ -69,7 +69,7 @@ public class WebserviceTesterService
      */
     @WebEndpoint(name = "webservice_testerPort")
     public WebserviceTesterRemote getWebserviceTesterPort() {
-        return super.getPort(new QName("http://stateless_SOAP_webservice_using_Eclipse/", "webservice_testerPort"), WebserviceTesterRemote.class);
+        return super.getPort(new QName("http://stateless_SOAP_webservice/", "webservice_testerPort"), WebserviceTesterRemote.class);
     }
 
     /**
