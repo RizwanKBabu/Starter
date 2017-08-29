@@ -94,7 +94,6 @@ public class AcessEJBStateless {
 	         for_eclipse_client.TeststatelessToXML xx = k.getEntryStateless(1903);
 	         System.out.println("Result : id - "+xx.getId() +" name - "+xx.getName());
 	         
-	         System.out.println();
 	         
 		}catch(Exception e){
 			e.printStackTrace();
