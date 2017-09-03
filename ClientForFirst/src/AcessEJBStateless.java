@@ -18,6 +18,7 @@ import com.entity.testEntityStateless;
 
 import Start_from_stateless.FIrstStatelessRemote;
 import XML_Packaging.Teststateless_to_XML;
+import for_eclipse_client.Webservice_testerRemoteProxy;
 import for_eclipse_client.Webservice_testerServiceLocator;
 import for_eclipse_client.Webservice_testerServiceSoapBindingStub;
 import start_from_stateful.StatefulBeanRemote;
@@ -88,16 +89,23 @@ public class AcessEJBStateless {
 	         TeststatelessToXML x1 = h.getEntryStateless(1902);
 	         System.out.println("Result : id - "+x1.getId() +" name - "+x1.getName());
 	         
-	         /** using eclipse web service client  (for_eclipse_client) **/
+	         /** using eclipse web service client  (for_eclipse_client) - 1**/
 	         Webservice_testerServiceLocator ec = new Webservice_testerServiceLocator();
 	         for_eclipse_client.Webservice_testerRemote k = ec.getwebservice_testerPort();
 	         
 	         for_eclipse_client.TeststatelessToXML xx = k.getEntryStateless(1903);
 	         System.out.println("Result : id - "+xx.getId() +" name - "+xx.getName());
 	         
+	         /** using eclipse web service client  (for_eclipse_client) - 2**/ 
 	        Webservice_testerServiceSoapBindingStub stub = (Webservice_testerServiceSoapBindingStub) ec.getwebservice_testerPort(new URL("http://localhost:7004/FirstEJB/webservice_tester"));
 	        for_eclipse_client.TeststatelessToXML yy = stub.getEntryStateless(1904);
 	        System.out.println("Result : id - "+yy.getId() +" name - "+yy.getName());
+	        
+	        /** using eclipse web service client  (for_eclipse_client) - 3**/
+	        Webservice_testerRemoteProxy p = new Webservice_testerRemoteProxy();
+	        p.setEndpoint("http://localhost:7004/FirstEJB/webservice_tester");
+	        for_eclipse_client.TeststatelessToXML tt = p.getEntryStateless(1905);
+	        System.out.println("Result : id - "+tt.getId() +" name - "+tt.getName());
 	        
 		}catch(Exception e){
 			e.printStackTrace();
