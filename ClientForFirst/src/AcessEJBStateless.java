@@ -19,6 +19,7 @@ import com.entity.testEntityStateless;
 import Start_from_stateless.FIrstStatelessRemote;
 import XML_Packaging.Teststateless_to_XML;
 import for_eclipse_client.Webservice_testerServiceLocator;
+import for_eclipse_client.Webservice_testerServiceSoapBindingStub;
 import start_from_stateful.StatefulBeanRemote;
 import stateless_SOAP_webservice.webservice_testerRemote;
 import stateless_soap_websevice_stub.TeststatelessToXML;
@@ -94,7 +95,10 @@ public class AcessEJBStateless {
 	         for_eclipse_client.TeststatelessToXML xx = k.getEntryStateless(1903);
 	         System.out.println("Result : id - "+xx.getId() +" name - "+xx.getName());
 	         
-	         
+	        Webservice_testerServiceSoapBindingStub stub = (Webservice_testerServiceSoapBindingStub) ec.getwebservice_testerPort(new URL("http://localhost:7004/FirstEJB/webservice_tester"));
+	        for_eclipse_client.TeststatelessToXML yy = stub.getEntryStateless(1904);
+	        System.out.println("Result : id - "+yy.getId() +" name - "+yy.getName());
+	        
 		}catch(Exception e){
 			e.printStackTrace();
 		}
