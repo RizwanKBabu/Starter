@@ -3,6 +3,7 @@ package Start_from_stateless;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.ejb.EJB;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.ejb.Timeout;
@@ -11,12 +12,15 @@ import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.jboss.ejb3.annotation.LocalBinding;
 import org.jboss.ejb3.annotation.RemoteBinding;
 
 import com.entity.HSQLTestEntity;
 import com.entity.testEntityStateless;
 
 import callback.listener.InterceptorTest;
+import start_from_stateful.StatefulBean;
+import start_from_stateful.StatefulBeanRemote;
 
 /**
  * Session Bean implementation class FIrstStateless
@@ -24,7 +28,8 @@ import callback.listener.InterceptorTest;
 @Interceptors ({InterceptorTest.class})
 @Stateless
 @RemoteBinding(jndiBinding="StatelessFirst")
-public class FIrstStateless implements FIrstStatelessRemote {
+@LocalBinding(jndiBinding="StatelessFirstLocal")
+public class FIrstStateless implements FIrstStatelessRemote,FIrstStatelessLocal {
 	
 	int i=0;
 	
@@ -37,7 +42,12 @@ public class FIrstStateless implements FIrstStatelessRemote {
 	@PersistenceContext(unitName="EjbHsqlDefault")
 	private EntityManager em;
 	
+  
 	
+	
+	public FIrstStateless() {}
+
+
 	@Override
 	public String start() {
 		// TODO Auto-generated method stub
@@ -85,8 +95,12 @@ public class FIrstStateless implements FIrstStatelessRemote {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<HSQLTestEntity> getHsql(int id) {
-		 return em.createQuery("SELECT e FROM HSQLTestEntity e").getResultList();
+		return em.createQuery("SELECT e FROM HSQLTestEntity e").getResultList();
 	}
 	
-	
+	public void localToClass()
+	{
+		System.out.println("Local to class access");
+	}
+
 }

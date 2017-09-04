@@ -56,7 +56,7 @@ public class AcessEJBStateless {
 	        StatefulBeanRemote bean2 = (StatefulBeanRemote)context.lookup("StatefulFirst");
 	        System.out.println("Result computed by EJB is :"+bean2.StartWithStateful());
 	        bean2.makeEntry("Shameer");
-	        //System.out.println(bean2.getEntry(50));
+	        //System.out.println(bean2.getEntry(1));
 	        
 	         Queue queue = (Queue) context.lookup("/queue/BookQueue");
 	         QueueConnectionFactory factory =  (QueueConnectionFactory) context.lookup("ConnectionFactory");
